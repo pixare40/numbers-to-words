@@ -26,7 +26,10 @@ namespace numbers_to_words
                         }
                         catch (ArgumentException)
                         {
+                            ConsoleColor current = Console.ForegroundColor;
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Argument does not fall within expected range");
+                            Console.ForegroundColor = current;
                         }
                         
                     }
