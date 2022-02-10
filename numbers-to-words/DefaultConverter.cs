@@ -36,11 +36,21 @@ namespace numbers_to_words
 
             if (number % 10000 == number)
             {
+                if((number % 1000).ToString().Length == 1)
+                {
+                    return GetCase(number, 1000, " thousand, ", true);
+                }
+
                 return GetCase(number, 1000, " thousand, ");
             }
 
             if (number % 100000 == number)
             {
+                if ((number % 1000).ToString().Length == 1)
+                {
+                    return string.Format("{0} thousand, and {1}", GetTensCase(number / 1000), NumbersToStrings(number % 1000));
+                }
+
                 return string.Format("{0} thousand, {1}", GetTensCase(number / 1000), NumbersToStrings(number % 1000));
             }
 
@@ -70,7 +80,7 @@ namespace numbers_to_words
         {
             if (number % 10 == 0)
             {
-                int stringIndex = (number / 10) - 1;
+                int stringIndex = (number / 10);
                 return secondaryNumberStrings[stringIndex];
             }
 

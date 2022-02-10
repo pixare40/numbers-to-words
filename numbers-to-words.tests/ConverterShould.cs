@@ -11,8 +11,8 @@ namespace numbers_to_words.tests
         {
             var factory = new NumberToWordConverterFactory();
 
-            var converter = factory.GetConverter(23456);
-            string words = converter.GetWords(23456);
+            var converter = factory.GetConverter(3006);
+            string words = converter.GetWords(30006);
 
             Assert.That(words, Is.EqualTo("twenty three thousand, four hundred and fifty six"));
         }
