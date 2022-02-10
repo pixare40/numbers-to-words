@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>bin\numbers-to-words</OutputPath>
+    <OutputPath>bin\</OutputPath>
   </PropertyGroup>
 
 </Project>
